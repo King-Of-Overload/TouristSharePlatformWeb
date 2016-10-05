@@ -1,0 +1,62 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    font-family: 'Microsoft YaHei';
+}
+
+
+li{
+    list-style-type:none;
+}
+.content{
+    margin-top:50px;
+}
+a:hover{
+    text-decoration: none;
+}
+.fl{
+    float:left;
+}
+.fr{
+    float:right;
+}
+.padZero{
+    padding:0 !important;
+}
+/*�������û���Ϣ*/
+.user-info a{
+    padding:5px !important;
+}
+.user-info img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+}
+.user-info .badge{
+    background:red;
+    position:absolute;
+    top:0;
+    right:0;
+}
+.user-info a{
+    line-height: 40px !important;
+}
+
+/*������*/
+.title-blue{
+    color:#66ccff;
+    font-size:24px;
+    line-height:45px;
+    border-bottom: 2px solid #66ccff;
+}
+
+.footer{
+    height:10em;
+    background:#ccc;
+}
+/*菜单*/
+                  
+
+

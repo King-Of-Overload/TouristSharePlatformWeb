@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.user.model.SecrectMessage" table="SecrectMessage">
+    <id name="smessageid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="message"/>
+    <property name="smessagetime"/>
+    <property name="isread"/>
+         <!-- 悄悄话发送者与用户的多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="senderid" name="sender" lazy="false"/>
+  <!-- 悄悄话接收者与用户的多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="receiverid" name="receiver" lazy="false"/>
+    </class>
+    </hibernate-mapping>

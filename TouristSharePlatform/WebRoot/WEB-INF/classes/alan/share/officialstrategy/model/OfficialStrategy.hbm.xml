@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.officialstrategy.model.OfficialStrategy" table="OfficialStrategy">
+    <id name="ostrategyid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="ostrategyname"/>
+    <property name="ostrategybref"/>
+    <property name="ostrategydescription"/>
+    <property name="ostrategyurl"/>
+    <property name="ostrategyimage"/>
+    <property name="clickednum"/>
+    <property name="cityid"/>
+    <!-- 攻略与省份的关联 -->
+  <many-to-one class="alan.share.officialstrategy.model.Provinces" column="provinceid" name="provinces" lazy="false"/>
+    </class>
+    </hibernate-mapping>

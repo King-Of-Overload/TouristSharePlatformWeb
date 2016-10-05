@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="photo" extends="welcome">
+<global-results>
+<result name="msg">/WEB-INF/page/reg.jsp</result>
+<result name="loginPage">/WEB-INF/page/login.jsp</result>
+<result name="quit" type="redirectAction">index</result>
+</global-results>
+
+<action name="photo_*" class="photoAction" method="{1}">
+<result name="goToPhoto">/WEB-INF/page/userphoto.jsp</result>
+<result name="goToShowOneAlbum">/WEB-INF/page/showOneAlbum.jsp</result>
+<result name="goToUploadImage">/WEB-INF/page/uploadImages.jsp</result>
+<result name="goToPowerPointView">/WEB-INF/page/PowerPointView.jsp</result>
+</action>
+</package>
+</struts>

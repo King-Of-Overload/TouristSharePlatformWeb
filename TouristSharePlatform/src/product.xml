@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="product" extends="welcome"> 
+<global-results>
+<result name="msg">/WEB-INF/page/reg.jsp</result>
+<result name="loginPage">/WEB-INF/page/login.jsp</result>
+<result name="quit" type="redirectAction">index</result>
+<result name="pageNotFound">/WEB-INF/page/404.jsp</result>
+</global-results>
+
+<action name="product_*" method="{1}" class="productAction">
+<result name="goToProductIndex">/WEB-INF/page/ProductIndex.jsp</result>
+<result name="goToPublishProduct">/WEB-INF/page/PublishProduct.jsp</result>
+<result name="goToProductList">/WEB-INF/page/ProductList.jsp</result>
+<result name="goToSingleProduct">/WEB-INF/page/SingleProduct.jsp</result>
+<result name="goToOrderCreate">/WEB-INF/page/OrderCreate.jsp</result>
+<result name="goToPay">/WEB-INF/page/pay.jsp</result>
+</action>
+</package>
+</struts>

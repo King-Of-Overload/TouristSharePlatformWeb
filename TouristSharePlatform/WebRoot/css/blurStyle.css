@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+.container {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  
+}
+ 
+.container .bg-blur-overlay {
+  background-size: cover;
+  z-index: -1;
+  background-attachment:fixed;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(46%, rgba(0, 0, 0, 0.08)), color-stop(59%, rgba(0, 0, 0, 0.08)), color-stop(100%, rgba(0, 0, 0, 0.9)));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.08) 46%, rgba(0, 0, 0, 0.08) 59%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.08) 46%, rgba(0, 0, 0, 0.08) 59%, rgba(0, 0, 0, 0.9) 100%);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 46%, rgba(0, 0, 0, 0.08) 59%, rgba(0, 0, 0, 0.9) 100%);
+}
+ 
+.container .bg-blur {
+  z-index: -2;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height:auto;
+  display: block;
+  top: 0;
+  left: 0;
+}
+ 
+.container .content { z-index: 1; }

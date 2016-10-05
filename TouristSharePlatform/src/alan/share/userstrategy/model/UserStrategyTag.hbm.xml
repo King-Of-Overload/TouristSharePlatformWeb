@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.userstrategy.model.UserStrategyTag" table="UserStrategyTag">
+    <id name="ustrategytagid">
+    <generator class="native"/>  <!-- 主键生成策略，自增 -->
+    </id>
+    <property name="ustrategytagname"/>
+    <property name="ustrategyclickednum"/>
+    <!-- 多对多集合 -->
+    <set name="strategies" table="UserStrategyAndTags" lazy="false" schema="dbo" catalog="TouristSharePlatform">
+    <key column="ustrategytagid"></key>
+    <many-to-many class="alan.share.userstrategy.model.UserStrategy" column="ustrategyid"/>
+    </set>
+    </class>
+    </hibernate-mapping>

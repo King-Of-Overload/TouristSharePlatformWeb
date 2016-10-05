@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.officialstrategy.model.Provinces" table="Provinces">
+    <id name="provinceid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值-->
+    </id>
+    <property name="provincename"/>
+    <property name="provincekeys"/>
+      <!-- 配置城市的集合 -->
+    <set name="cities" lazy="false" order-by="cityid" cascade="delete">
+    <key column="provinceid"/>
+     <one-to-many class="alan.share.officialstrategy.model.City"/>
+    </set>
+    </class>
+    </hibernate-mapping>

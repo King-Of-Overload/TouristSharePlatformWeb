@@ -1,0 +1,24 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style:none;}
+img{border:0;}
+/* 焦点图 透明过度
+------------------------------ */
+.slide_fade{overflow:hidden;position:relative;margin:20px auto;width:960px;height:370px;background:#fff;}
+.slide_fade .box{overflow:hidden;position:relative;width:960px;height:270px;background:#000;z-index:4;}
+.slide_fade .box a{color:#fff;}
+.slide_fade .box a:hover{text-decoration:none;}
+.slide_fade .list{overflow:hidden;height:9999px;}
+.slide_fade .list li{position:relative;width:960px;height:270px;}
+.slide_fade .list img{_vertical-align:top;}
+.slide_fade .txt{cursor:pointer;position:absolute;top:20px;left:45px;font:14px/24px "\5fae\8f6f\96c5\9ed1";}
+.slide_fade .txt h3{font:40px/80px "\5fae\8f6f\96c5\9ed1";}
+.slide_fade .btn{position:absolute;bottom:0;left:0;height:97px;background:#fff;z-index:5;}
+.slide_fade .btn a{color:#555;text-decoration:none;}
+.slide_fade .btn li{overflow:hidden;float:left;width:145px;height:90px;margin:0 0 0 12px;padding-top:7px;color:#333;
+_margin:0 10px 0 0;_height:87px;}
+.slide_fade .btn li:first-child{margin-left:0;}
+.slide_fade .btn .selected{position:relative;top:-3px;border-top:3px solid #f32465;}
+.slide_fade .btn h3{padding:4px 0 0 0;font:12px/20px "\5b8b\4f53";text-indent:2px;}
+.slide_fade .btn p{color:#999;font:12px/20px "\5b8b\4f53";text-indent:2px;}
+.slide_fade .btn p a{color:#999;}
+.slide_fade .btn p a:hover{text-decoration:underline;}

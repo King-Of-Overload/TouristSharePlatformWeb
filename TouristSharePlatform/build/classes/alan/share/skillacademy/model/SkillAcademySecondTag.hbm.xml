@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.skillacademy.model.SkillAcademySecondTag" table="SkillAcademySecondTag">
+    <id name="skillsecondid">
+    <generator class="native"/>  <!-- 主键生成策略，自增 -->
+    </id>
+    <property name="skillsecondname"/>
+    <property name="skillsecondclickednum"/>
+     <!-- 二级话题与热门标签的多对一关联 -->
+  <many-to-one class="alan.share.skillacademy.model.SkillAcademyHotTag" column="skillhottagid" name="hotTag" lazy="false"/>
+  
+  <!-- 多对多关联,相关话题与技法学院文章 -->
+  <set name="academies" table="SkillSecondTagAndAcademy" lazy="false" schema="dbo" catalog="TouristSharePlatform">
+  <key column="skillsecondid"></key>
+  <many-to-many class="alan.share.skillacademy.model.SkillAcademy" column="skilid"/>
+  </set>
+    </class>
+    </hibernate-mapping>

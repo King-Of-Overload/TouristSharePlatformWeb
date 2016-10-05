@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.lovecard.model.LovePostCard" table="LovePostCard">
+    <id name="loveid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="lovetitle"/>
+    <property name="lovecontent"/>
+    <property name="lovepic"/>
+    <property name="lovenumber"/>
+     <property name="lovestarttime"/>
+     <property name="lovedeadline"/>
+     <property name="lovetags"/>
+     
+     <!-- 相册与用户的多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="user" lazy="false"/>
+  
+  <set name="joins" inverse="true" lazy="false">
+  <key><column name="loveid"/></key>
+  <one-to-many class="alan.share.lovecard.model.EventParticipate"/>
+  </set>
+  
+  
+  
+    </class>
+    </hibernate-mapping>

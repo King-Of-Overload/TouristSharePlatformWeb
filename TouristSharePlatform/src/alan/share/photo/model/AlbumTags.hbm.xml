@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.photo.model.AlbumTags" table="AlbumTags">
+    <id name="tagid">
+    <generator class="native"/>  <!-- 主键生成策略，自增 -->
+    </id>
+    <property name="tagname"/>
+    <property name="clickednum"/>
+    <!-- 多对多集合 -->
+    <set name="albums" table="AlbumtagsAndUserAlbums" lazy="false" schema="dbo" catalog="TouristSharePlatform">
+    <key column="tagid"></key>
+    <many-to-many class="alan.share.photo.model.UserAlbums" column="albumid"/>
+    </set>
+    
+    </class>
+    </hibernate-mapping>

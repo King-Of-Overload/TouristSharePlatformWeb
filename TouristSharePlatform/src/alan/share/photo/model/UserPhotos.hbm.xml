@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.photo.model.UserPhotos" table="UserPhotos">
+    <id name="photoid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="photourl"/>
+     <!-- 相册与用户的多对一关联 -->
+  <many-to-one class="alan.share.photo.model.UserAlbums" column="albumid" name="albums" lazy="false"/>
+    
+    </class>
+    </hibernate-mapping>

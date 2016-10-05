@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.user.model.TripUser" table="TripUser">
+    <id name="userid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="username"/>
+    <property name="userpassword"/>
+    <property name="useremail"/>
+    <property name="userstate"/>
+    <property name="useractivecode"/>
+    <property name="headerimage"/>
+    <property name="phone"/>
+    <property name="sex"/>
+    <property name="city"/>
+    <property name="province"/>
+    </class>
+    </hibernate-mapping>

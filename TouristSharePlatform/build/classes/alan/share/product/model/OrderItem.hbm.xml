@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.product.model.OrderItem" table="OrderItem">
+    <id name="oid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值-->
+    </id>
+    <property name="oprice"/>
+    <property name="otime"/>
+    <property name="ostate"/>
+    <property name="paddress"/>
+  <!-- 订单与用户之间多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="user" lazy="false"/>
+  <!-- 订单与产品之间多对一关联 -->
+  <many-to-one class="alan.share.product.model.Product" column="pid" name="product" lazy="false"/>
+    </class>
+    </hibernate-mapping>

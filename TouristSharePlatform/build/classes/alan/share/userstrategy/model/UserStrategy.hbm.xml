@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.userstrategy.model.UserStrategy" table="UserStrategy">
+    <id name="ustrategyid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="ustrategyname"/>
+    <property name="ustrategycontent"/>
+    <property name="ustrategydate"/>
+    <property name="uclickednum"/>
+    <property name="ulikecount"/>
+     <property name="ustrategycoverstory"/>
+     <property name="ustrategyplaintext"/>
+     <property name="isesense"/>
+     <!-- 攻略与用户的多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="tripUser" lazy="false"/>
+  <!--攻略与城市关联-->
+    <many-to-one class="alan.share.officialstrategy.model.City" column="cityid" name="city" lazy="false"/>
+          <!-- 多对多关联,攻略与tag标签 -->
+  <set name="tags" table="UserStrategyAndTags" lazy="false" schema="dbo" catalog="TouristSharePlatform">
+  <key column="ustrategyid"></key>
+  <many-to-many class="alan.share.userstrategy.model.UserStrategyTag" column="ustrategytagid"/>
+  </set>
+    </class>
+    </hibernate-mapping>

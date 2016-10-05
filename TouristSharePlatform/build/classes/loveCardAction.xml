@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="loveCard" extends="welcome">
+<global-results>
+<result name="msg">/WEB-INF/page/reg.jsp</result>
+<result name="loginPage">/WEB-INF/page/login.jsp</result>
+<result name="pageNotFound">/WEB-INF/page/404.jsp</result>
+</global-results>
+
+<action name="lovecard_*" class="loveCardAction" method="{1}">
+<result name="goToLoveCard">/WEB-INF/page/LoveCardIndex.jsp</result>
+<result name="goToCreateLoveCard">/WEB-INF/page/CreateLoveCard.jsp</result>
+<result name="goToLoveCardEvent">/WEB-INF/page/LoveCardEvent.jsp</result>
+<result name="goToUserPostCardSpace">/WEB-INF/page/LoveCardUserSpace.jsp</result>
+<result name="showAllChosenUser">/WEB-INF/page/LoveCardListPage.jsp</result>
+</action>
+</package>
+</struts>

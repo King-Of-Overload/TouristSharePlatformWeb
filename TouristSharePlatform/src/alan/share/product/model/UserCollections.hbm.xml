@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.product.model.UserCollections" table="UserCollections">
+    <id name="collectid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="collectdate"/>
+    
+  <!-- 收藏与用户之间多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="user" lazy="false"/>
+  <!-- 收藏与商品的多对一关联 -->
+  <many-to-one class="alan.share.product.model.Product" column="pid" name="product" lazy="false"/>
+    </class>
+    </hibernate-mapping>

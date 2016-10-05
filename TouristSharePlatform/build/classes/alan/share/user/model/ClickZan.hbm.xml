@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.user.model.ClickZan" table="ClickZan">
+    <id name="czid">
+    <generator class="native"/>  <!-- 主键生成策略，自增 -->
+    </id>
+    <property name="userid"/>
+    <property name="topicid"/>
+    <property name="topictype"/>
+    
+
+    </class>
+    </hibernate-mapping>

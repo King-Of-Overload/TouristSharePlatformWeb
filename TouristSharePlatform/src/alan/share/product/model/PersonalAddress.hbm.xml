@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.product.model.PersonalAddress" table="PersonalAddress">
+    <id name="paddressid">
+    <generator class="native"/>  <!-- 主键生成策略，自增 -->
+    </id>
+    <property name="paddressname"/>
+    <property name="paddress"/>
+    <property name="phone"/>
+  <!-- 地址与用户之间多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="user" lazy="false"/>
+    </class>
+    </hibernate-mapping>

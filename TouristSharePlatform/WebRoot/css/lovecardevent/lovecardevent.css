@@ -1,0 +1,345 @@
+@CHARSET "UTF-8";
+@CHARSET "UTF-8";
+    .bg_image {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50%;
+    min-height: 500px;
+}
+.love-container{
+	width: 1000px;
+	margin: auto;
+	margin-top: 145px;
+}
+.hd{
+	margin-bottom: 30px;
+}
+.clearfix:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: '';
+	clear: both;
+	height: 0;
+}
+.fl{
+	float: left;
+}
+.hd h1{
+	width: 200px;
+}
+.hd h1, .hd .lovenav, .hd .lovenav li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+a:link{
+	color: #3197CB;
+	text-decoration: none;
+}
+.hd .lovenav{
+	width: 800px;
+	margin-top: 15px;
+}
+.hd .lovenav li {
+    margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 0 15px;
+}
+.hd .lovenav li a {
+    font-size: 14px;
+    line-height: 30px;
+    color: #f1f1f1;
+}
+.bd{
+	min-height: 420px;
+}
+.yui3-g {
+    letter-spacing: -0.31em;
+    word-spacing: -0.43em;
+}
+#detailmain {
+    width: 640px;
+}
+.yui3-u {
+    display: inline-block;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+}
+.carddetailbox {
+    background: #fff6f7;
+    position: relative;
+    padding-bottom: 10px;
+}
+.carddetailimg {
+    padding: 20px;
+    min-height: 150px;
+    min-width: 180px;
+}
+.carddetailimg img {
+    max-width: 260px;
+    max-height: 210px;
+}
+.carddetailbox h1 {
+    margin: 0;
+    padding: 0;
+    line-height: 1.3;
+    padding: 10px 0;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    padding-right: 15px;
+    word-wrap: break-word;
+    word-break: break-all;
+    min-width: 60px;
+}
+.carddetailtext {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+    margin-right: 15px;
+}
+.carddetailtext li {
+    margin-bottom: 8px;
+}
+.gray {
+    color: #666;
+}
+.gray2 {
+    color: #aaa;
+}
+a:link {
+    color: #3197CB;
+    text-decoration: none;
+}
+.bd h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+.carddetailbox .joinevent {
+    position: absolute;
+    right: 20px;
+    bottom: 18px;
+}
+.detailinfo {
+    padding: 20px;
+    padding-bottom: 30px;
+    background: #fff;
+    line-height: 1.4;
+}
+.detailinfo h3{
+	    font-size: 14px;
+    font-weight: normal;
+    color: #154615;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+.listbox {
+    background: #fff;
+    padding-top: 30px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    min-height: 70px;
+}
+.listbox h3 {
+    padding-bottom: 30px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #154615;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1px;
+}
+.listbox h3 a {
+    font-size: 12px;
+    margin-right: 20px;
+    font-weight: normal;
+}
+.yui3-button {
+    display: inline-block;
+    zoom: 1;
+    font-size: 100%;
+    padding: 0.4em 1em 0.45em;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    color: #444;
+    color: rgba(0, 0, 0, 0.80);
+    border: 1px solid #999;
+    border: none rgba(0, 0, 0, 0);
+    background-color: #E6E6E6;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,255,255, 0.30)), color-stop(40%, rgba(255,255,255, 0.15)), to(transparent));
+    background-image: -webkit-linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: -moz-linear-gradient(top, rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: -ms-linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: -o-linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0, 0.25) inset, 0 2px 0 rgba(255,255,255, 0.30) inset, 0 1px 2px rgba(0,0,0, 0.15);
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0, 0.25) inset, 0 2px 0 rgba(255,255,255, 0.30) inset, 0 1px 2px rgba(0,0,0, 0.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.25) inset, 0 2px 0 rgba(255,255,255, 0.30) inset, 0 1px 2px rgba(0,0,0, 0.15);
+    -webkit-transition: 0.1s linear -webkit-box-shadow;
+    -moz-transition: 0.1s linear -moz-box-shadow;
+    -ms-transition: 0.1s linear box-shadow;
+    -o-transition: 0.1s linear box-shadow;
+    transition: 0.1s linear box-shadow;
+}
+.list {
+    margin-bottom: 25px;
+    padding: 0 20px;
+}
+.list .limg {
+    float: left;
+}
+.list .ltext {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 65px;
+}
+.list .ltext li {
+    margin-bottom: 10px;
+    line-height: 1;
+    font-size: 12px;
+}
+.list .ltext li.content {
+	margin-top:0px;
+    line-height: 1.4;
+    font-size: 13px;
+}
+.list .ltext li.last {
+    padding-top: 10px;
+    font-size: 12px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 25px;
+    margin-bottom: 0;
+}
+.page {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px 0;
+}
+.page span {
+    margin: 0 2px;
+}
+.messagebox {
+    background: #e0edfa;
+    padding: 20px;
+}
+.messagebox h3{
+	    font-size: 14px;
+    font-weight: normal;
+    color: #154615;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+.messagebox .inputbox {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.messagebox .inputbox li {
+    padding: 8px 0;
+}
+.messagebox .typearea2 {
+    border: 1px solid #999;
+    width: 100%;
+    height: 8em;
+}
+.messagebox .inputbox li {
+    padding: 8px 0;
+}
+.messagebox .inputbox input {
+    vertical-align: middle;
+}
+.messagebox .textinputl {
+    border: 1px solid #999;
+    height: 26px;
+    line-height: 26px;
+    width: 20em;
+}
+.messagebox .textinputs {
+    border: 1px solid #999;
+    height: 26px;
+    line-height: 26px;
+    width: 9em;
+}
+body li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+body select, input, button, textarea {
+    font: 99% arial,helvetica,clean,sans-serif;
+}
+#sider {
+    width: 360px;
+}
+#sider .content {
+    margin-left: 50px;
+}
+.idlistbox {
+    margin-bottom: 1px;
+    background: #fff;
+    padding: 20px;
+}
+.idlistbox h3{
+	    font-size: 14px;
+    font-weight: normal;
+    color: #154615;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+.idlist {
+    margin-bottom: 10px;
+    float: left;
+    width: 50%;
+}
+.idlist .ilimg, .idlist .ilimg img, .idlist .iltext {
+    float: left;
+}
+.iltext {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 10px;
+}
+
+.iltext li {
+    line-height: 1;
+    margin-bottom: 15px;
+    font-size: 12px;
+}
+
+.nick_txt {
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 75px;
+}
+

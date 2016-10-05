@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.product.model.Product" table="Product">
+    <id name="pid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值 -->
+    </id>
+    <property name="pname"/>
+    <property name="marketprice"/>
+    <property name="shopprice"/>
+    <property name="pdescription"/>
+    <property name="pclickednum"/>
+    <property name="pishot"/>
+    <property name="pdate"/>
+    <property name="contactnum"/>
+    <property name="qualitychoice"/>
+    <property name="pplaintext"/>
+    <property name="pcontent"/>
+    <!-- 商品与商品二级分类的关联 -->
+  <many-to-one class="alan.share.product.model.ProductSecondCategory" column="pcsid" name="secondCategory" lazy="false"/>
+  <!-- 商品与用户之间多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="seller" lazy="false"/>
+  <!-- 商品与城市之间多对一关联 -->
+  <many-to-one class="alan.share.officialstrategy.model.City" column="cityid" name="city" lazy="false"/>
+    </class>
+    </hibernate-mapping>

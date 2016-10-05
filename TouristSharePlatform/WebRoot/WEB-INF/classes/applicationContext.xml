@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+           
+<!-- 配置连接池 -->
+	<!-- 引入外部属性文件 -->
+	<context:property-placeholder location="classpath:c3p0.properties" />
+	<!-- 配置c3p0连接池 -->
+	<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="${jdbc.driver}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.user}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	
+	<!-- hibernate相关信息 -->
+	<bean id="mysessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<!-- 注入连接池 -->
+		<property name="dataSource" ref="dataSource" />
+		<!-- 配置hibernate其他属性 -->
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+				<prop key="hibernate.show_sql">true</prop>
+				<prop key="hibernate.format_sql">true</prop>
+				<prop key="hibernate.connection.autocommit">false</prop>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+		<!-- 配置hibernate映射文件 -->
+		<property name="mappingResources">
+		<list>
+		<value>alan/share/user/model/TripUser.hbm.xml</value>
+		<value>alan/share/officialstrategy/model/City.hbm.xml</value>
+		<value>alan/share/officialstrategy/model/Provinces.hbm.xml</value>
+		<value>alan/share/officialstrategy/model/OfficialStrategy.hbm.xml</value>
+		<value>alan/share/photo/model/AlbumTags.hbm.xml</value>
+		</list>
+		</property>
+	</bean>
+	
+	<!-- 事务管理 -->
+	<!-- 事务管理器 -->
+	<bean id="transactionManager" class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+	<property name="sessionFactory" ref="mysessionFactory"></property>
+	</bean>
+<!-- 开启注解事务 -->
+  
+  <tx:annotation-driven transaction-manager="transactionManager"/>
+
+           <!-- dao配置 -->
+           <bean id="tripUserDao" class="alan.share.user.dao.TripUserDao">
+           <property name="sessionFactory" ref="mysessionFactory"/>
+           </bean>
+           <bean id="officialStrategyDao" class="alan.share.officialstrategy.dao.OfficialStrategyDao">
+           <property name="sessionFactory" ref="mysessionFactory"></property>
+           </bean>
+           <bean id="photoDao" class="alan.share.photo.dao.PhotoDao">
+           <property name="sessionFactory" ref="mysessionFactory"></property>
+           </bean>
+           <!-- service配置 -->
+           <bean id="tripUserService" class="alan.share.user.service.TripUserService">
+           <property name="userDao" ref="tripUserDao"/>
+           </bean>
+           <bean id="officialStrategyService" class="alan.share.officialstrategy.service.OfficialStrategyService">
+           <property name="officialStrategyDao" ref="officialStrategyDao"></property>
+           </bean>
+           <bean id="photoService" class="alan.share.photo.service.PhotoService">
+           <property name="photoDao" ref="photoDao"></property>
+           </bean>
+           
+           <!-- action配置 -->
+           <bean id="tripUserAction" class="alan.share.user.action.TripUserAction" scope="prototype">
+           <property name="userService" ref="tripUserService"/>
+           </bean>
+           
+           <bean id="indexAction" class="alan.share.index.action.IndexAction" scope="prototype">
+           </bean>
+           <!-- 用户游记攻略action -->
+           <bean id="userStrategyAction" class="alan.share.userstrategy.action.UserStrategyAction" scope="prototype">
+           </bean>
+           <!-- 相册action -->
+           <bean id="photoAction" class="alan.share.photo.action.PhotoAction" scope="prototype">
+           <property name="photoService" ref="photoService"></property>
+           </bean>
+           <bean id="welcomeAction" class="alan.share.welcome.action.WelcomeAction" scope="prototype">
+           </bean>
+           <!-- 官方攻略action -->
+           <bean id="officialStrategyAction" class="alan.share.officialstrategy.action.OfficialStrategyAction" scope="prototype">
+           <property name="officialService" ref="officialStrategyService"></property>
+           </bean>
+
+</beans>

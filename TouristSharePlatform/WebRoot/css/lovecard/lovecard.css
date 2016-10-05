@@ -1,0 +1,310 @@
+@CHARSET "UTF-8";
+    .bg_image {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-position: 50%;
+    min-height: 500px;
+}
+.love-container{
+	width: 1000px;
+	margin: auto;
+	margin-top: 145px;
+}
+.hd{
+	margin-bottom: 30px;
+}
+.clearfix:after{
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: '';
+	clear: both;
+	height: 0;
+}
+.fl{
+	float: left;
+}
+.hd h1{
+	width: 200px;
+}
+.hd h1, .hd .lovenav, .hd .lovenav li {
+    margin: 0;
+    padding: 0;
+    float: left;
+    list-style: none;
+}
+a:link{
+	color: #3197CB;
+	text-decoration: none;
+}
+.hd .lovenav{
+	width: 800px;
+	margin-top: 15px;
+}
+.hd .lovenav li {
+    margin-right: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 3px;
+    padding: 0 15px;
+}
+.hd .lovenav li a {
+    font-size: 14px;
+    line-height: 30px;
+    color: #f1f1f1;
+}
+.bd{
+	min-height: 420px;
+}
+.yui3-g{
+	letter-spacing: -0.31em;
+	word-spacing: -0.43em;
+}
+ #sider2{
+	width: 150px;
+}
+.yui3-u {
+    display: inline-block;
+    zoom: 1;
+    letter-spacing: normal;
+    word-spacing: normal;
+    vertical-align: top;
+}
+#main{
+	width: 490px;
+}
+#sider{
+	width: 360px;
+}
+#sider2 .lcontent{
+	margin-right: 0px;
+	background: #ededed;
+}
+.siderlist{
+	margin:0;
+	padding: 0;
+	list-style: none;
+}
+.siderlist li{
+	line-height: 2.4;
+	font-size: 12px;
+	margin-bottom: 3px;
+}
+.siderlist .hover {
+    background: #ebebeb;
+    color: #000;
+}
+.siderlist li a {
+    display: block;
+    padding: 0 10px;
+}
+.siderlist .hover .gray2{
+	color: #000;
+}
+.cardboxbg {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 1px;
+}
+.cardbox {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #ededed;
+}
+
+.boximg {
+    width: 120px;
+    height: 120px;
+    overflow: hidden;
+    margin-right: 20px;
+}
+.boximg img{
+	width: 120px;
+}
+fieldset, img {
+    border: 0;
+    max-height: 210px;
+}
+.boxtext {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.cardbox .word_break {
+    word-wrap: break-word;
+    word-break: break-all;
+    width: 300px;
+}
+.boxtext .hl {
+    margin-bottom: 10px;
+}
+.boxtext li {
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+.boxtext .hl a {
+    font-size: 14px;
+}
+.boxtext .keyword{
+	margin-bottom: 10px;
+}
+.boxtext .keyword span {
+    color: #aaa;
+    padding-right: 8px;
+}
+.gray {
+    color: #666;
+}
+.boxtext li.last{
+	margin-bottom: 0;
+	padding-top: 10px;
+}
+.cardboxbg .last{
+	border: none;
+	padding: 0;
+}
+.boxlast {
+    background: #eee;
+    padding: 5px;
+}
+.page {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #fff;
+    padding: 20px 0;
+}
+.pagebox span, .pagebox a, .pagebox span.pageon, .pagebox a.pageon, .pagebox a:hover,.sboxtext a,.sboxtext a:hover,
+.sendbox a,.sendbox a:hover{
+    padding: 1px 5px;
+    font-size: 14px;
+    border: none;
+    color: #2886b6;
+    margin: 0 6px;
+    font-family: 'simsun';
+}
+.pagebox a:hover, .pagebox span.pageon {
+    background: #2886b6;
+    color: #fff;
+}
+#sider .lcontent {
+    margin-left: 50px;
+}
+.sendboxbg, .bgbox {
+    background: #fff;
+    padding: 20px;
+}
+.sidermb40 {
+    margin-bottom: 40px;
+}
+
+.sidermb20 {
+    margin-bottom: 20px;
+}
+a.yui3-button {
+    color: rgba(0,0,0, 0.80);
+    color: #444;
+    text-decoration: none;
+}
+#sider p {
+    line-height: 1.8;
+}
+p, fieldset, table, pre {
+    margin-bottom: 1em;
+}
+.orange{
+	color: #ff6600;
+}
+.yui3-button {
+    display: inline-block;
+    zoom: 1;
+    font-size: 100%;
+    padding: 0.4em 1em 0.45em;
+    line-height: normal;
+    white-space: nowrap;
+    vertical-align: baseline;
+    text-align: center;
+    cursor: pointer;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    color: #444;
+    color: rgba(0, 0, 0, 0.80);
+    border: 1px solid #999;
+    border: none rgba(0, 0, 0, 0);
+    background-color: #E6E6E6;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=0);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,255,255, 0.30)), color-stop(40%, rgba(255,255,255, 0.15)), to(transparent));
+    background-image: -webkit-linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: -moz-linear-gradient(top, rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: -ms-linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: -o-linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    background-image: linear-gradient(rgba(255,255,255, 0.30), rgba(255,255,255, 0.15) 40%, transparent);
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0, 0.25) inset, 0 2px 0 rgba(255,255,255, 0.30) inset, 0 1px 2px rgba(0,0,0, 0.15);
+    -moz-box-shadow: 0 0 0 1px rgba(0,0,0, 0.25) inset, 0 2px 0 rgba(255,255,255, 0.30) inset, 0 1px 2px rgba(0,0,0, 0.15);
+    box-shadow: 0 0 0 1px rgba(0,0,0, 0.25) inset, 0 2px 0 rgba(255,255,255, 0.30) inset, 0 1px 2px rgba(0,0,0, 0.15);
+    -webkit-transition: 0.1s linear -webkit-box-shadow;
+    -moz-transition: 0.1s linear -moz-box-shadow;
+    -ms-transition: 0.1s linear box-shadow;
+    -o-transition: 0.1s linear box-shadow;
+    transition: 0.1s linear box-shadow;
+}
+.yui3-button:hover{
+	background-color: #3197CB;
+}
+.yui3-button:visited{
+	background-color: #3197CB;
+}
+.love-container h3 {
+    font-size: 14px;
+    font-weight: normal;
+    color: #154615;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 1em;
+}
+.sbox{
+	margin-bottom: 25px;
+}
+.sboximg{
+	width: 58px;
+}
+.sboxtext {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: 58px;
+    font-size: 12px;
+}
+.sboxtext li {
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.sboxtext li.ct {
+    line-height: 1.4;
+}
+.sboxtext .line_h {
+    line-height: 15px;
+}
+.sendbox {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #efefef;
+    padding-bottom: 10px;
+}
+.sendbox li {
+    margin-bottom: 5px;
+}

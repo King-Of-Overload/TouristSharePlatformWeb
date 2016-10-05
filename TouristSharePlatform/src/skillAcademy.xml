@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="skillAcademy" extends="welcome">
+<global-results>
+<result name="msg">/WEB-INF/page/reg.jsp</result>
+<result name="loginPage">/WEB-INF/page/login.jsp</result>
+<result name="quit" type="redirectAction">index</result>
+</global-results>
+
+<action name="skillacademy_*" class="skillAcademyAction" method="{1}">
+<result name="goToSkillAcademy">/WEB-INF/page/skill_academy.jsp</result>
+<result name="goToSkillAcademyEdit">/WEB-INF/page/SkillAcademyEdit.jsp</result>
+<result name="goToShowOneSkillAcademyArticle">/WEB-INF/page/showOneSkillAcademyArticle.jsp</result>
+<result name="goToSkillList">/WEB-INF/page/skillacademyList.jsp</result>
+<result name="goTohottagSkillList">/WEB-INF/page/hottagskillacademyList.jsp</result>
+</action>
+</package>
+</struts>

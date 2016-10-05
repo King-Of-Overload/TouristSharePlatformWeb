@@ -1,0 +1,195 @@
+.web-style{
+    background: #66ccff;
+    color:#fff;
+}
+.content{
+    width:1280px;
+    margin:125px auto;
+    padding:20px 0;
+}
+.content-left{
+    width:800px;
+    float:left;
+    overflow: hidden;
+}
+.content-right{
+    width:400px;
+    float:right;
+    overflow: hidden;
+}
+
+
+/*������*/
+.search-condition{
+    margin:20px 0;
+}
+.search-condition span{
+    padding:0 10px;
+}
+.search-condition .active{
+    background: #66ccff;
+    padding:3px 7px;
+    border-radius: 5px;
+}
+.search-condition .active a{
+    color:#fff !important;
+}
+
+
+.strategy-list{
+    padding-bottom:20px;
+}
+/***********�����б�ͷ��****************/
+.strategy-list-sort{
+    float:right;
+    line-height:36px;
+}
+.strategy-list-sort a{
+    padding:0 10px;
+}
+
+
+/***************�����б�����modal***************/
+#strategy-modal{
+	display: inline;
+}
+.strategy-list-item{
+    border-bottom:1px dashed #ddd;
+    overflow:hidden;
+}
+
+.userStrategyImages, .authorArticle{
+	overflow: hidden;
+	padding: 0 0 5px 0;
+}
+
+.authorArticle{
+	color: #337ab7;
+}
+/*缩略图*/
+.singleImage{
+	float:left;
+	width:230px;
+	height:150px;
+}
+
+
+.content-info{
+    float:right;
+}
+.content-info li{
+    float:left;
+    padding:0 10px;
+    color:#999;
+}
+.content-info li i{
+    padding-right:5px;
+}
+
+.authorInfo{
+    overflow:hidden;
+    padding:0 0 5px 0;
+}
+.authorInfo li{
+    float:left;
+    line-height: 32px;
+}
+.authorInfo .author-headImg img{
+    width:32px;
+    height:32px;
+    border-radius:50%;
+}
+
+.content-body{
+    clear:both;
+    padding:10px;
+}
+
+
+
+/*翻转特效需要的CSS文件*/
+.artGroup {
+  display: block;
+  width: 204px;
+  height: 135px;
+  position: relative;
+  margin: 0 10px 10px 10px;
+  float: left;
+}
+
+.artwork {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.artGroup img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: block;
+  border: 0px solid #333;
+}
+
+.artGroup .detail {
+  display: block;
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.artGroup .detail h3 {
+  text-align: center;
+  color: orange;
+}
+
+.artGroup .detail p {
+  text-align: left;
+  padding: 0 0.25em;
+}    
+
+
+
+.artGroup.flip {
+  -webkit-perspective: 800px;
+  perspective: 800px;
+}
+ 
+.artGroup.flip .artwork {
+  -webkit-transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+ 
+.artGroup.flip .detail,
+.artGroup.flip .theFlip {
+  -webkit-transform: rotateY(-180deg);
+  transform: rotateY(-180deg);
+}
+ 
+.artGroup.flip img,
+.artGroup.flip .detail {
+	border:1px solid #333;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}                
+
+
+.artGroup.slide { overflow: hidden; }
+.artGroup.slide .detail { bottom: -364px; }  
+
+
+/*@start 评论区样式*/
+#box_title{width:394px;margin:20px auto 0 auto;font-weight:bold;line-height:28px;font-size:14px;}
+/* con */
+#con{width:394px;height:540px;margin:0px auto;position:relative;border-top:1px solid #d6d6d6;background-color:#FFF;overflow:hidden;}
+#con .bottomcover{position:absolute;bottom:0;background:url("./../images/halftransp.png") no-repeat 0 -5px;height:35px;width:394px;_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='http://img.t.sinajs.cn/t35/style/images/tlogin/halftransp.png?id=1341302813656', sizingMethod='crop');pointer-events:none;}
+#con ul{position:relative;margin:0px 10px 0px 10px;top:0;left:0;padding:0;}
+#con ul li{width:100%;border-top:1px dotted #d6d6d6;padding:10px 0;_padding:8px 0;overflow:hidden;line-height:1.5;}
+#con ul li .div_left{float:left;width:50px;border:1px solid;}
+#con ul li .div_right{float:right;width:305px}
+#con ul li .div_right a{color:#6EAFD5;padding:0px;}
+#con ul li .div_right .twit_item_time{color:#999;padding:0px;}
+/*@end 评论区样式*/

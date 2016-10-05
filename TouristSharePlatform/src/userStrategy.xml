@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="userstrategy" extends="welcome">
+<global-results>
+<result name="msg">/WEB-INF/page/reg.jsp</result>
+<result name="loginPage">/WEB-INF/page/login.jsp</result>
+<result name="quit" type="redirectAction">index</result>
+</global-results>
+
+<action name="userstrategy_*" class="userStrategyAction" method="{1}">
+<result name="success">/WEB-INF/page/user_strategy.jsp</result>
+<result name="goToStrategyEdit">/WEB-INF/page/StrategyEdit.jsp</result>
+<result name="goToStrategyInfo">/WEB-INF/page/strategyInfo.jsp</result>
+</action>
+</package>
+</struts>

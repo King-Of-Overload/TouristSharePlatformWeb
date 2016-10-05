@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+<package name="init" extends="welcome">
+<action name="index" class="indexAction">
+<result name="success">/WEB-INF/page/home.jsp</result>
+</action>
+<action name="goToSearch" class="indexAction" method="goToSearch">
+<result name="goToSearch">/WEB-INF/page/SearchIndex.jsp</result>
+</action>
+<action name="acquireUserStrategyAsync" class="indexAction" method="acquireUserStrategyAsync">
+</action>
+<action name="saveComments" class="indexAction" method="saveComments"></action>
+<action name="submitReply" class="indexAction" method="submitReply"></action>
+<action name="retriveCommentsAndReplyData" class="indexAction" method="retriveCommentsAndReplyData"></action>
+<action name="getHottestTopFourAlbumTags" class="indexAction" method="getHottestTopFourAlbumTags"></action>
+</package>
+</struts>

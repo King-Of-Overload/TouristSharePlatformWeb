@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.product.model.ProductSecondCategory" table="ProductSecondCategory">
+    <id name="pcsid">
+    <generator class="native"/>  <!-- 主键生成策略，自增 -->
+    </id>
+    <property name="pcsname"/>
+    <!-- 商品二级分类与商品一级分类的关联 -->
+  <many-to-one class="alan.share.product.model.ProductCategory" column="pcategoryid" name="category" lazy="false"/>
+    </class>
+    </hibernate-mapping>

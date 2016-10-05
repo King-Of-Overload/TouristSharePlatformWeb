@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.lovecard.model.LovePostCardComment" table="LovePostCardComment">
+    <id name="lovecommentid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值-->
+    </id>
+    <property name="lovecommentcontent"/>
+    <property name="loveaddress"/>
+    <property name="lovepostcode"/>
+    <property name="lovereceivername"/>
+    <property name="lovedate"/>
+     <!-- 活动评论与用户的多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="user" lazy="false"/>
+  <!-- 活动评论与明信片活动多对一关联 -->
+  <many-to-one class="alan.share.lovecard.model.LovePostCard" column="loveid" name="postCard" lazy="false"/>
+  
+    </class>
+    </hibernate-mapping>

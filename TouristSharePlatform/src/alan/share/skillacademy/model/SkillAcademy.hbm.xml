@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+    
+    <hibernate-mapping>
+    <class name="alan.share.skillacademy.model.SkillAcademy" table="SkillAcademy">
+    <id name="skilid">
+    <generator class="assigned"/>  <!-- 主键生成策略，app赋值-->
+    </id>
+    <property name="skilltitle"/>
+    <property name="skillcontent"/>
+    <property name="skilldate"/>
+    <property name="clickednum"/>
+    <property name="isessence"/>
+    <property name="skillplaintext"/>
+    <property name="skillnumupdatetime"/>
+    <property name="skilltempclickednum"/>
+    
+      <!--技法学院文章与用户的多对一关联 -->
+  <many-to-one class="alan.share.user.model.TripUser" column="userid" name="user" lazy="false"/>
+  
+     <!--技法学院文章与主分类的多对一关联-->
+  <many-to-one class="alan.share.skillacademy.model.SkillAcademyCategory" column="skillcategoryid" name="category" lazy="false"/>
+    <!--多对多关联,技法学院文章与相关话题 -->
+  <set name="secondTags" table="SkillSecondTagAndAcademy" lazy="false" schema="dbo" catalog="TouristSharePlatform">
+  <key column="skilid"></key>
+  <many-to-many class="alan.share.skillacademy.model.SkillAcademySecondTag" column="skillsecondid"/>
+  </set>
+  
+    </class>
+    </hibernate-mapping>
